@@ -40,6 +40,17 @@ export default function Hero() {
     setTilt({ x: 0, y: 0 });
   };
 
+  const statusBadge = (
+    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-[#090E13] border border-[#00FF9C]/30 text-xs sm:text-sm font-mono shadow-[0_0_12px_rgba(0,255,156,0.15)] w-fit max-w-full">
+      <span className="relative flex h-2 w-2 shrink-0">
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00FF9C] opacity-75" />
+        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00FF9C]" />
+      </span>
+      <span className="text-[#00FF9C] font-semibold shrink-0">[STATUS]:</span>
+      <span className="text-[#D7FFE9]/90">{profile.statusLine}</span>
+    </div>
+  );
+
   return (
     <section
       id="hero"
@@ -54,17 +65,17 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none opacity-20 bg-[linear-gradient(to_right,#00ff9c08_1px,transparent_1px),linear-gradient(to_bottom,#00ff9c08_1px,transparent_1px)] bg-[size:32px_32px]"
       />
 
-      <div className="relative z-10 max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 items-center">
-        {/* Left Column: Text, Status, Pitch, Buttons */}
-        <div className="order-2 lg:order-1 lg:col-span-7 flex flex-col space-y-5 sm:space-y-6 text-left">
-          {/* Status Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-[#090E13] border border-[#00FF9C]/30 text-xs sm:text-sm font-mono shadow-[0_0_12px_rgba(0,255,156,0.15)] w-fit max-w-full">
-            <span className="relative flex h-2 w-2 shrink-0">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00FF9C] opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00FF9C]" />
-            </span>
-            <span className="text-[#00FF9C] font-semibold shrink-0">[STATUS]:</span>
-            <span className="text-[#D7FFE9]/90">{profile.statusLine}</span>
+      <div className="relative z-10 max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-8 items-center">
+        {/* Mobile-Only Status Badge (Order 1 on mobile, hidden on lg) */}
+        <div className="order-1 lg:hidden flex justify-start">
+          {statusBadge}
+        </div>
+
+        {/* Left Column: Text, Status, Pitch, Buttons (Order 3 on mobile, lg:order-1 on desktop) */}
+        <div className="order-3 lg:order-1 lg:col-span-7 flex flex-col space-y-5 sm:space-y-6 text-left">
+          {/* Desktop-Only Status Badge (hidden on mobile, shown on lg) */}
+          <div className="hidden lg:block">
+            {statusBadge}
           </div>
 
           {/* Glitch Name */}
@@ -128,8 +139,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Column: Chethan's Photo in Cyber Cut-Corner Frame (Mobile order-1, Desktop lg:order-2) */}
-        <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center lg:justify-end">
+        {/* Right Column: Chethan's Photo in Cyber Cut-Corner Frame (Mobile order-2, Desktop lg:order-2) */}
+        <div className="order-2 lg:order-2 lg:col-span-5 flex justify-center lg:justify-end">
           <div
             ref={photoCardRef}
             onMouseMove={handleMouseMove}
