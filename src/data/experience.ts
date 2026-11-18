@@ -35,7 +35,7 @@ export const experiences: ExperienceItem[] = [
     role: "Cyber Security Intern",
     organization: "Cynaris Solutions Pvt. Ltd.",
     department: "Software & Technology Department",
-    period: "Nov 2026 – Jan 2027",
+    period: "Nov 2026 – Present",
     location: "Bengaluru, India",
     type: "Part-time, Hybrid",
     isCurrent: true,

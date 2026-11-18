@@ -53,7 +53,7 @@ export const profile = {
       subtext: "Smart India Hackathon Software Edition"
     }
   ],
-  cvPath: "/Chethan_Kumar.CV.pdf",
+  cvPath: "/ChethanKumar.CV.pdf",
   photoPath: "/images/chethan.png",
   copyright: "© 2026 Chethan Kumar — all systems nominal"
 };

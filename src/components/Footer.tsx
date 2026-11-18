@@ -76,7 +76,7 @@ export default function Footer() {
 
               <a
                 href={profile.cvPath}
-                download="Chethan_Kumar.CV.pdf"
+                download="ChethanKumar.CV.pdf"
                 className="inline-flex items-center gap-1.5 px-3 py-2.5 bg-[#05080A] border border-[#00E5FF]/40 hover:border-[#00E5FF] text-xs font-mono text-[#00E5FF] rounded-sm transition-colors"
               >
                 <Download className="w-4 h-4" />

@@ -7,11 +7,11 @@ import path from "path";
  */
 export function verifyCvFileExists(): boolean {
   try {
-    const cvPath = path.join(process.cwd(), "public", "Chethan_Kumar.CV.pdf");
+    const cvPath = path.join(process.cwd(), "public", "ChethanKumar.CV.pdf");
     if (!fs.existsSync(cvPath)) {
       console.warn(
-        "\n[CV CHECK WARNING]: /public/Chethan_Kumar.CV.pdf was not found!\n" +
-        "Ensure Chethan_Kumar.CV.pdf is placed directly in the /public directory so download links work.\n"
+        "\n[CV CHECK WARNING]: /public/ChethanKumar.CV.pdf was not found!\n" +
+        "Ensure ChethanKumar.CV.pdf is placed directly in the /public directory so download links work.\n"
       );
       return false;
     }

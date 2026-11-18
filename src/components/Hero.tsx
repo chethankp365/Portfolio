@@ -112,7 +112,7 @@ export default function Hero() {
             {/* Download CV */}
             <a
               href={profile.cvPath}
-              download="Chethan_Kumar.CV.pdf"
+              download="ChethanKumar.CV.pdf"
               className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#090E13] text-[#00FF9C] border border-[#00FF9C]/40 hover:border-[#00FF9C] hover:bg-[#00FF9C]/10 rounded-sm transition-all duration-200 shadow-[0_0_12px_rgba(0,255,156,0.1)]"
             >
               <Download className="w-4 h-4 text-[#00FF9C]" />

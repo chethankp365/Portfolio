@@ -85,7 +85,7 @@ export default function Navbar() {
           {/* Download CV Nav Link */}
           <a
             href={profile.cvPath}
-            download="Chethan_Kumar.CV.pdf"
+            download="ChethanKumar.CV.pdf"
             className="ml-3 inline-flex items-center gap-1.5 px-3 py-1 text-xs text-[#00FF9C] border border-[#00FF9C]/40 hover:bg-[#00FF9C]/10 hover:border-[#00FF9C] transition-colors rounded-sm"
           >
             <Download className="w-3.5 h-3.5" />
@@ -97,7 +97,7 @@ export default function Navbar() {
         <div className="flex md:hidden items-center gap-2">
           <a
             href={profile.cvPath}
-            download="Chethan_Kumar.CV.pdf"
+            download="ChethanKumar.CV.pdf"
             className="inline-flex items-center gap-1 px-2.5 py-1 text-xs text-[#00FF9C] border border-[#00FF9C]/40 rounded-sm"
             aria-label="Download CV"
           >
@@ -134,7 +134,7 @@ export default function Navbar() {
           ))}
           <a
             href={profile.cvPath}
-            download="Chethan_Kumar.CV.pdf"
+            download="ChethanKumar.CV.pdf"
             onClick={() => setMobileMenuOpen(false)}
             className="flex items-center gap-2 px-3 py-2 text-sm text-[#00FF9C] bg-[#00FF9C]/5 border border-[#00FF9C]/30 rounded"
           >

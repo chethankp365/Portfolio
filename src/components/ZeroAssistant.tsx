@@ -236,7 +236,7 @@ export default function ZeroAssistant() {
     } else if (validated.type === "download_cv") {
       const link = document.createElement("a");
       link.href = profile.cvPath;
-      link.download = "Chethan_Kumar.CV.pdf";
+      link.download = "ChethanKumar.CV.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
