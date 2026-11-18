@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/banner_1.svg" alt="Chethan Kumar KP — Portfolio · AI, Computer Vision, Cybersecurity and Backend" width="100%"/>
+<img src="./banner_1.svg" alt="Chethan Kumar KP — Portfolio · AI, Computer Vision, Cybersecurity and Backend" width="100%"/>
 
 <br/>
 
